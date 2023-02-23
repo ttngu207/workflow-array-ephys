@@ -9,7 +9,7 @@ import pytest
 from element_interface.utils import QuietStdOut, find_full_path, value_to_bool
 
 from workflow_array_ephys.ingest import ingest_lab, ingest_sessions, ingest_subjects
-from workflow_array_ephys.paths import get_ephys_root_data_dir
+from workflow_array_ephys.utils.paths import get_ephys_root_data_dir
 
 # ------------------- SOME CONSTANTS -------------------
 
