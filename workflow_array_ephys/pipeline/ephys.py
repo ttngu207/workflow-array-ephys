@@ -11,7 +11,6 @@ from workflow_array_ephys.utils.paths import (
 
 __all__ = ["ephys", "ephys_report", "probe"]
 
-
 # ------------- Activate "ephys" schema -------------
 
 SkullReference = reference.SkullReference
