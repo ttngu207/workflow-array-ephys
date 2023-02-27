@@ -1,6 +1,6 @@
 from element_animal import subject
 from element_lab import lab
-from element_session import session_with_id as session
+from element_session import session_with_datetime as session
 
 from workflow_array_ephys import db_prefix
 
