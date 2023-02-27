@@ -1,5 +1,7 @@
 # DataJoint Workflow - Array Electrophysiology
 
+### Branch `minimal` - minimal version of `workflow-array-ephys`, with components relevant only to the `element-array-ephys`
+
 Workflow for extracellular array electrophysiology data acquired with a polytrode probe
 (e.g. [Neuropixels](https://www.neuropixels.org), Neuralynx) using the
 [SpikeGLX](https://github.com/billkarsh/SpikeGLX) or
