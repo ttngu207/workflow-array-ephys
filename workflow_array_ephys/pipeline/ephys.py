@@ -20,7 +20,7 @@ if not ephys.schema.is_activated():
     ephys.activate(db_prefix + "ephys", db_prefix + "probe", linking_module=__name__)
 
 
-# add a default kilosort2 paramset
+# add a default kilosort2.0 and kilosort2.5 paramset
 
 default_params = {
     "fs": 30000,
@@ -47,9 +47,19 @@ default_params = {
     "useRAM": 0,
 }
 
-ephys.ClusteringParamSet.insert_new_params(
-    clustering_method="kilosort2.5",
-    paramset_desc="Default parameter set for Kilosort2.5",
-    params=default_params,
-    paramset_idx=0,
-)
+try:
+    ephys.ClusteringParamSet.insert_new_params(
+        clustering_method="kilosort2.0",
+        paramset_desc="Default parameter set for Kilosort2.0",
+        params=default_params,
+        paramset_idx=0,
+    )
+
+    ephys.ClusteringParamSet.insert_new_params(
+        clustering_method="kilosort2.5",
+        paramset_desc="Default parameter set for Kilosort2.5",
+        params=default_params,
+        paramset_idx=1,
+    )
+except:
+    pass
