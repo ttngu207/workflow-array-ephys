@@ -18,7 +18,7 @@
 		"ghcr.io/rocker-org/devcontainer-features/miniforge:1": {}
 	},
 	"onCreateCommand": "pip install -e .",
-	"postStartCommand": "mkdir -p example_data && s3fs djhub.vathes.datapub.elements:/workflow-array-ephys-benchmark/v2 ./example_data -o multipart_size=530,endpoint=us-east-1,url=http://s3.amazonaws.com,public_bucket=1 && MYSQL_VER=8.0 MINIO_VER=RELEASE.2022-08-11T04-37-28Z docker compose -f ./.devcontainer/local-docker-compose.yaml down && MYSQL_VER=8.0 MINIO_VER=RELEASE.2022-08-11T04-37-28Z docker compose -f ./.devcontainer/local-docker-compose.yaml up --build --wait",
+	"postStartCommand": "s3fs djhub.vathes.datapub.elements:/workflow-array-ephys-benchmark/v2 $HOME/example_data -o multipart_size=530,endpoint=us-east-1,url=http://s3.amazonaws.com,public_bucket=1 && MYSQL_VER=8.0 MINIO_VER=RELEASE.2022-08-11T04-37-28Z docker compose -f ./.devcontainer/local-docker-compose.yaml down && MYSQL_VER=8.0 MINIO_VER=RELEASE.2022-08-11T04-37-28Z docker compose -f ./.devcontainer/local-docker-compose.yaml up --build --wait",
 	"forwardPorts": [
 		80,
 		443,
